@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     private bool m_bVerticalAxisHasChanged = true;
 
     private Vector3 m_PreviousPos = Vector3.zero;
+    private List<MapManager.TileCase> Paths = new List<MapManager.TileCase>();
 
     private bool HasMoved {
         get { return m_PreviousPos != transform.position;}
@@ -49,7 +50,6 @@ public class Player : MonoBehaviour
         Action();
 
         CheckPos();
-        m_PreviousPos = transform.position;
     }
 
     void Movement()
@@ -116,11 +116,32 @@ public class Player : MonoBehaviour
     {
         MapManager.TileCase tile = MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos];
 
-        if ( tile.m_TileType == MapManager.ETileType.Neutral)
+        if (Paths.Count > 1 && Paths[0] == tile)
         {
-            tile.m_TileType = (MapManager.ETileType)(m_ID + 1);
-            tile.m_Owner = gameObject;
+            FillMap();
+            return;
         }
+        else if (tile.m_Owner == gameObject || Paths.Contains(tile))
+        {
+            return;
+        }
+
+        Paths.Add(tile);
+    }
+
+    void FillMap()
+    {
+        MapManager.ETileType t = (MapManager.ETileType)Random.Range(0, (int)(MapManager.ETileType.Neutral)); 
+        for (int i = 0; i < Paths.Count; i++)
+        {
+            //if (Paths[i].m_TileType == MapManager.ETileType.Neutral)
+            //{
+                Paths[i].m_TileType = t;
+                Paths[i].m_Owner = gameObject;
+            //}
+        }
+
+        Paths.Clear();
     }
 
     void CheckPos()
