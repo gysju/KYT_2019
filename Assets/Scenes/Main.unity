@@ -120,6 +120,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &617485873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3724623694265425609, guid: 731758e415521e04ea98c0cd06bb9c62,
+    type: 3}
+  m_PrefabInstance: {fileID: 3724623694866123000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &617485874
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617485873}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: edef69e601b264e4bad98fe28f69d905, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &810481044
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 3724623694265425612, guid: 731758e415521e04ea98c0cd06bb9c62,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 3724623694265425612, guid: 731758e415521e04ea98c0cd06bb9c62,
         type: 3}
@@ -336,6 +361,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3724623694265425611, guid: 731758e415521e04ea98c0cd06bb9c62,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2171345200657918937, guid: 31f0c9d1f52f450448df9eb247058b56,
+        type: 3}
     - target: {fileID: 3724623694265425610, guid: 731758e415521e04ea98c0cd06bb9c62,
         type: 3}
       propertyPath: m_AxisSensitiveValue
@@ -612,6 +643,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[PLAYER_TWO]'
       objectReference: {fileID: 0}
+    - target: {fileID: 9112069889809025647, guid: 8486592fe6f002b47ae2ebae3e515ee0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9112069889809026450, guid: 8486592fe6f002b47ae2ebae3e515ee0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -667,6 +703,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9112069889809025645, guid: 8486592fe6f002b47ae2ebae3e515ee0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -886982008418262028, guid: a5320d3d1e323df4a9cf4f697c628058,
+        type: 3}
     - target: {fileID: 9112069889809025644, guid: 8486592fe6f002b47ae2ebae3e515ee0,
         type: 3}
       propertyPath: m_AxisSensitiveValue

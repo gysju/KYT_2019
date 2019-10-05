@@ -43,3 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad7f8aa09db26bd4ca3eaba22b7205e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_toolPrefab: {fileID: 5475556404203368213, guid: ade895cc8403e574fb181c55281c0ab4,
+    type: 3}
+  m_NumberOfPlayer: 2
+  m_ToolOne: {fileID: -1216151345726946417, guid: 735306841d87db2408d8846d621eb83f,
+    type: 3}
+  m_ToolTwo: {fileID: 2005254317860052838, guid: 80f97745424d1014d8ad81be9729a0ea,
+    type: 3}
+  m_ToolThree: {fileID: 57591053551863209, guid: ee6c824eb989aca4394d3e48a1405094,
+    type: 3}

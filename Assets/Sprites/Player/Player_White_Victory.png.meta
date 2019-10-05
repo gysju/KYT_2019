@@ -1,55 +1,37 @@
 fileFormatVersion: 2
-guid: 050eccda14cf7434bbd5ad8904a8576e
+guid: 9af475a9062e96e488fd15698b56b87f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1347532211411968617
-    second: Grass_0
+      213: -2576317730533281997
+    second: Player_White_Victory_0
   - first:
-      213: -7645372005702169758
-    second: Grass_1
+      213: -2416647317530799442
+    second: Player_White_Victory_1
   - first:
-      213: 6891631753638271631
-    second: Grass_2
+      213: 3513506240742775686
+    second: Player_White_Victory_2
   - first:
-      213: 475435623110610922
-    second: Grass_3
+      213: -5549318967263441283
+    second: Player_White_Victory_3
   - first:
-      213: 5299400320964040512
-    second: Grass_4
+      213: -5660167128234207720
+    second: Player_White_Victory_4
   - first:
-      213: -7255497285719700247
-    second: Grass_5
+      213: 223468521065693816
+    second: Player_White_Victory_5
   - first:
-      213: 6828908663453297030
-    second: Grass_6
+      213: -5966036787939913503
+    second: Player_White_Victory_6
   - first:
-      213: 6694032873506494867
-    second: Grass_7
+      213: -8451601205347545300
+    second: Player_White_Victory_7
   - first:
-      213: 2289616372777055746
-    second: Grass_8
+      213: -6304281884034966087
+    second: Player_White_Victory_8
   - first:
-      213: 7471297114442723461
-    second: Grass_9
-  - first:
-      213: 8577017789959637929
-    second: Grass_10
-  - first:
-      213: -6796477259373386654
-    second: Grass_11
-  - first:
-      213: -6259141551469331208
-    second: Grass_12
-  - first:
-      213: 7867572149665653903
-    second: Grass_13
-  - first:
-      213: 1423580199096852351
-    second: Grass_14
-  - first:
-      213: 3123766704050763852
-    second: Grass_15
+      213: -3185975081256795333
+    second: Player_White_Victory_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -134,259 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7a59f4f3f84d9a4ca6cd89d7be0a8e3
-      internalID: -1347532211411968617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b062bc3a853036342882c1bc1045d148
-      internalID: -7645372005702169758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e24a78813c8973a49aa1f818cf85e7d6
-      internalID: 6891631753638271631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0ec5843b3d0ab74c8c6b85f565f05d5
-      internalID: 475435623110610922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af99806660c9c944e914976cfa354715
-      internalID: 5299400320964040512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_5
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa851b6c2468ba14f8a41659d181c504
-      internalID: -7255497285719700247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_6
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3296faeee53551b45b4deebcbdd275e8
-      internalID: 6828908663453297030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_7
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 094c9b4a527d85245895a3ef85b76286
-      internalID: 6694032873506494867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea6416cf65bc8b449bda011ee44f7b36
-      internalID: 2289616372777055746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_9
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 555a09cd4370a7f41bb2abbb847a2380
-      internalID: 7471297114442723461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_10
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 464ec230c1d3c42469612ba452b2371a
-      internalID: 8577017789959637929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_11
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6e627f71c416c045b4e939cbcb0ee08
-      internalID: -6796477259373386654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grass_12
+      name: Player_White_Victory_0
       rect:
         serializedVersion: 2
         x: 0
@@ -400,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 676de74e94b7aec4a8d4d58bf44212ad
-      internalID: -6259141551469331208
+      spriteID: ce4a4e6b3118bd34eb82c72850eb6159
+      internalID: -2576317730533281997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_13
+      name: Player_White_Victory_1
       rect:
         serializedVersion: 2
         x: 16
@@ -421,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30711dcd42fe4cb4b9485d3e3252c414
-      internalID: 7867572149665653903
+      spriteID: 50b50b14f63030747b141bbd2c700420
+      internalID: -2416647317530799442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_14
+      name: Player_White_Victory_2
       rect:
         serializedVersion: 2
         x: 32
@@ -442,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c0ca36305f644c4abef558e5008e594
-      internalID: 1423580199096852351
+      spriteID: c9810b8f593160541917edcdf505dd48
+      internalID: 3513506240742775686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_15
+      name: Player_White_Victory_3
       rect:
         serializedVersion: 2
         x: 48
@@ -463,8 +193,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59efc5201baccdb429c083142daf9a80
-      internalID: 3123766704050763852
+      spriteID: 41a51723733a9214397c80fc0611ad16
+      internalID: -5549318967263441283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_White_Victory_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2664bf5f4549c8547bc4ff8fa230c67b
+      internalID: -5660167128234207720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_White_Victory_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea432538a7c4a0941be016237ea128dd
+      internalID: 223468521065693816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_White_Victory_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe92b386c7ac27044b24d03ed365e307
+      internalID: -5966036787939913503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_White_Victory_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dca0eeb61805784f9488d6d7988e16d
+      internalID: -8451601205347545300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_White_Victory_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af53913f56c608846a77478f3807b2a0
+      internalID: -6304281884034966087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_White_Victory_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16597a2924d272a43ba7b8cd9013db7c
+      internalID: -3185975081256795333
       vertices: []
       indices: 
       edges: []

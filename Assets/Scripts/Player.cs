@@ -13,11 +13,10 @@ public class Player : MonoBehaviour
     private int m_Xpos;
     private int m_Ypos;
 
-    private float m_previousHorizontalValue = 0.0f;
-    private float m_previousVerticalValue = 0.0f;
-
     private bool m_bHorizontalAxisHasChanged = true;
     private bool m_bVerticalAxisHasChanged = true;
+
+    private MapManager.TileCase[] TileCaseSelected;
 
     private void Awake()
     {
@@ -26,8 +25,13 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        m_Xpos = m_StartPosX;
-        m_Ypos = m_StartPosY;
+        MapManager.TileCase tileCase = new MapManager.TileCase();
+        if (MapManager.Instance.GetAvailableCase(ref tileCase))
+        {
+            tileCase.m_Owner = gameObject;
+            m_Xpos = tileCase.m_X;
+            m_Xpos = tileCase.m_Y;
+        }
     }
 
     void Update()
@@ -76,6 +80,9 @@ public class Player : MonoBehaviour
             m_bVerticalAxisHasChanged = true;
         }
 
-        transform.position = MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos];
+        Vector3 pos = new Vector3(MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_XCoord,
+                                  MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_YCoord, 
+                                  0.0f); 
+        transform.position = pos;
     }
 }
