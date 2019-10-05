@@ -65,7 +65,7 @@ public class MapManager : MonoBehaviour
     private void OnDrawGizmos()
     {
         if (m_MapCoordonate == null)
-            return;
+            IniteMap();
 
         Gizmos.color = Color.red;
 
@@ -73,7 +73,7 @@ public class MapManager : MonoBehaviour
         {
             for (int j = 0; j < m_MapCoordonate[i].Length; j++)
             {
-                Gizmos.DrawWireSphere(m_MapCoordonate[i][j], 1.0f);
+                Gizmos.DrawWireSphere(m_MapCoordonate[i][j], 0.03f);
             }
         }
     }

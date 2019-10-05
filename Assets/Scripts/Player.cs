@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private int m_ID;
+    public int m_ID;
 
     private int m_Xpos;
     private int m_Ypos;
