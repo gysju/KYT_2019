@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
                         m_ToolParent);
 
             tool.CurrentTileCase = tileCase;
-            tileCase.m_Owner = tool.gameObject;
+            tileCase.m_Owner = null;
             tileCase.m_Weapon = tool;
         }
     }

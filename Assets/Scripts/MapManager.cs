@@ -83,7 +83,8 @@ public class MapManager : MonoBehaviour
     {
         for (int j = 0; j < m_ShuffleCoordonate.Count; j++)
         {
-            if (m_ShuffleCoordonate[j].m_Owner == null)
+            if (   m_ShuffleCoordonate[j].m_Owner == null 
+                && m_ShuffleCoordonate[j].m_Weapon == null)
             {
                 result = m_ShuffleCoordonate[j];
                 return true;
@@ -91,7 +92,6 @@ public class MapManager : MonoBehaviour
         }
         return false;
     }
-
 
     public void Shuffle(List<TileCase> list)
     {

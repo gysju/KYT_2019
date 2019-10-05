@@ -48,11 +48,8 @@ public class Player : MonoBehaviour
         Movement();
         Action();
 
-        if (HasMoved)
-        {
-            CheckPos();
-            m_PreviousPos = transform.position;
-        }
+        CheckPos();
+        m_PreviousPos = transform.position;
     }
 
     void Movement()
@@ -102,31 +99,54 @@ public class Player : MonoBehaviour
         transform.position = pos;
     }
 
+    void Action()
+    {
+        if (Input.GetButton("Action" + m_ID) && MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon == null)
+        {
+            DrawMap();
+        }
+        else if (Input.GetButtonDown("Action" + m_ID) && MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon != null)
+        {
+            SwitchWeapon();
+        }
+    }
+
+    void DrawMap()
+    {
+        MapManager.TileCase tile = MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos];
+
+        if ( tile.m_TileType == MapManager.ETileType.Neutral)
+        {
+            tile.m_TileType = (MapManager.ETileType)(m_ID + 1);
+            tile.m_Owner = gameObject;
+        }
+    }
+
     void CheckPos()
     {
         
     }
 
-    void Action()
-    {
-        if (Input.GetButtonDown("Action" + m_ID) && MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon != null)
-        {
-            Tool previousTool = EquipedTool;
-
-            EquipedTool = MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon;
-            EquipedTool.SetOwner(this, true);
-
-            MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon = null;
-
-            if (previousTool != null)
-            {
-                previousTool.SetOwner(this, false);
-            }
-        }
-    }
-
     public Vector2 GetPos()
     {
         return new Vector2( m_Xpos, m_Ypos);
+    }
+
+    void SwitchWeapon()
+    {
+        Tool previousTool = EquipedTool;
+
+        EquipedTool = MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon;
+        EquipedTool.SetOwner(this, true);
+
+        if (previousTool != null)
+        {
+            previousTool.SetOwner(this, false);
+            MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon = previousTool;
+        }
+        else
+        {
+            MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon = null;
+        }
     }
 }
