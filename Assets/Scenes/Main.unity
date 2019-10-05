@@ -441,11 +441,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6930331337886161522, guid: 3cd8a5b031c9e93478000e6d69f0f20b,
-        type: 3}
-      propertyPath: m_AnimatorToolOne
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cd8a5b031c9e93478000e6d69f0f20b, type: 3}
 --- !u!1001 &8486585707722145141
@@ -714,6 +709,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -886982008418262028, guid: a5320d3d1e323df4a9cf4f697c628058,
         type: 3}
+    - target: {fileID: 9112069889809025645, guid: 8486592fe6f002b47ae2ebae3e515ee0,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112069889809025645, guid: 8486592fe6f002b47ae2ebae3e515ee0,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112069889809025645, guid: 8486592fe6f002b47ae2ebae3e515ee0,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9112069889809025644, guid: 8486592fe6f002b47ae2ebae3e515ee0,
         type: 3}
       propertyPath: m_AxisSensitiveValue

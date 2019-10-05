@@ -14,6 +14,7 @@ public class MapManager : MonoBehaviour
     public class TileCase
     {
         public GameObject m_Owner = null;
+        public Tool m_Weapon = null;
         public ETileType m_TileType = ETileType.Neutral;
 
         public float m_XCoord = 0.0f;
@@ -44,16 +45,6 @@ public class MapManager : MonoBehaviour
         {
             Destroy(this);
         }
-    }
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
     }
 
     public int GetMapSizeX()

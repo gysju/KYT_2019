@@ -16,6 +16,12 @@ public class Player : MonoBehaviour
     private bool m_bHorizontalAxisHasChanged = true;
     private bool m_bVerticalAxisHasChanged = true;
 
+    private Vector3 m_PreviousPos = Vector3.zero;
+
+    private bool HasMoved {
+        get { return m_PreviousPos != transform.position;}
+    }
+
     private MapManager.TileCase[] TileCaseSelected;
 
     private void Awake()
@@ -36,7 +42,14 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Movement();    
+        Movement();
+
+        if (HasMoved)
+        {
+            CheckPos();
+
+            m_PreviousPos = transform.position;
+        }
     }
 
     void Movement()
@@ -84,5 +97,16 @@ public class Player : MonoBehaviour
                                   MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_YCoord, 
                                   0.0f); 
         transform.position = pos;
+    }
+
+    void CheckPos()
+    {
+        if (MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon != null)
+        {
+            Tool tool = MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon;
+            tool.SetOwner(gameObject);
+
+            MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon = null;
+        }
     }
 }
