@@ -105,7 +105,8 @@ public class Player : MonoBehaviour
         {
             DrawMap();
         }
-        else if (Input.GetButtonDown("Action" + m_ID) && MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon != null)
+
+        if (Input.GetButtonDown("Action" + m_ID) && MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon != null)
         {
             SwitchWeapon();
         }
