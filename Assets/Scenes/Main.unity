@@ -306,6 +306,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[PLAYER_ONE]'
       objectReference: {fileID: 0}
+    - target: {fileID: 3724623694265425609, guid: 731758e415521e04ea98c0cd06bb9c62,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3724623694265425612, guid: 731758e415521e04ea98c0cd06bb9c62,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,6 +372,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2171345200657918937, guid: 31f0c9d1f52f450448df9eb247058b56,
         type: 3}
+    - target: {fileID: 3724623694265425611, guid: 731758e415521e04ea98c0cd06bb9c62,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3724623694265425610, guid: 731758e415521e04ea98c0cd06bb9c62,
         type: 3}
       propertyPath: m_AxisSensitiveValue
@@ -722,6 +732,11 @@ PrefabInstance:
     - target: {fileID: 9112069889809025645, guid: 8486592fe6f002b47ae2ebae3e515ee0,
         type: 3}
       propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9112069889809025645, guid: 8486592fe6f002b47ae2ebae3e515ee0,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9112069889809025644, guid: 8486592fe6f002b47ae2ebae3e515ee0,
