@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public Tool m_toolPrefab;
     public int m_NumberOfPlayer = 2;
 
+    [Space(5)]
     public Sprite m_ToolOne;
     public Sprite m_ToolTwo;
     public Sprite m_ToolThree;
@@ -42,12 +43,15 @@ public class GameManager : MonoBehaviour
                 {
                     case MapManager.ETileType.TypeOne:
                         tool.m_SpriteRenderer.sprite = m_ToolOne;
+                        tool.m_Animator.SetTrigger("Axe");
                         break;
                     case MapManager.ETileType.TypeTwo:
                         tool.m_SpriteRenderer.sprite = m_ToolTwo;
+                        tool.m_Animator.SetTrigger("Chisel");
                         break;
                     case MapManager.ETileType.TypeThree:
                         tool.m_SpriteRenderer.sprite = m_ToolThree;
+                        tool.m_Animator.SetTrigger("Shovel");
                         break;
                     default:
                         break;
