@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public int m_StartPosY = 0;
 
     public float m_AxisSensitiveValue = 0.2f;
+    public Transform m_WeaponsAnchor;
 
     private int m_Xpos;
     private int m_Ypos;
@@ -23,6 +24,8 @@ public class Player : MonoBehaviour
     }
 
     private MapManager.TileCase[] TileCaseSelected;
+
+    private Tool EquipedTool = null;
 
     private void Awake()
     {
@@ -43,11 +46,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
+        Action();
 
         if (HasMoved)
         {
             CheckPos();
-
             m_PreviousPos = transform.position;
         }
     }
@@ -101,12 +104,29 @@ public class Player : MonoBehaviour
 
     void CheckPos()
     {
-        if (MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon != null)
+        
+    }
+
+    void Action()
+    {
+        if (Input.GetButtonDown("Action" + m_ID) && MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon != null)
         {
-            Tool tool = MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon;
-            tool.SetOwner(gameObject);
+            Tool previousTool = EquipedTool;
+
+            EquipedTool = MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon;
+            EquipedTool.SetOwner(this, true);
 
             MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon = null;
+
+            if (previousTool != null)
+            {
+                previousTool.SetOwner(this, false);
+            }
         }
+    }
+
+    public Vector2 GetPos()
+    {
+        return new Vector2( m_Xpos, m_Ypos);
     }
 }

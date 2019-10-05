@@ -19,19 +19,24 @@ public class Tool : MonoBehaviour
         m_Animator = GetComponent<Animator>();
     }
 
-    public void SetOwner( GameObject NewOwner)
+    public void SetOwner( Player player, bool attach)
     {
-        Owner = NewOwner;
-
-        if (Owner == null)
+        if (!attach)
         {
             m_Animator.SetBool("IsUsed", false);
             transform.parent = m_OriginalParent;
+            MapManager.TileCase tile = MapManager.Instance.m_MapCoordonate[(int)player.GetPos().x][(int)player.GetPos().y];
+            transform.position =  new Vector3( tile.m_XCoord, tile.m_YCoord);
+            m_SpriteRenderer.sortingOrder = 1;
         }
         else
         {
+            Owner = player.gameObject;
             m_Animator.SetBool("IsUsed", true);
-            transform.parent = Owner.transform;
+            transform.parent = player.m_WeaponsAnchor;
+            transform.localPosition = Vector3.zero;
+
+            m_SpriteRenderer.sortingOrder = 2;
         }
     }
 }
