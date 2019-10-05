@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
 
     void Action()
     {
-        if (Input.GetButton("Action" + m_ID) && MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon == null)
+        if (Input.GetButton("Action" + m_ID) && EquipedTool  != null)
         {
             DrawMap();
         }
