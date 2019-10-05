@@ -127,6 +127,7 @@ public class Player : MonoBehaviour
         }
 
         Paths.Add(tile);
+        MapManager.Instance.ChangeTileType(0, m_ID, tile);
     }
 
     void FillMap()
@@ -138,7 +139,7 @@ public class Player : MonoBehaviour
             //{
                 Paths[i].m_TileType = t;
                 Paths[i].m_Owner = gameObject;
-                MapManager.Instance.ChangeTileType(1, 0, Paths[i]);
+                MapManager.Instance.ChangeTileType(1, m_ID, Paths[i]);
             //}
         }
 

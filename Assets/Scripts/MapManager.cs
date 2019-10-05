@@ -131,18 +131,18 @@ public class MapManager : MonoBehaviour
 
         if ( level == 0)
         {
-            switch (tileCase.m_TileType)
+            switch (playerID)
             {
-                case ETileType.TypeOne:
+                case 0:
                     m_TileMapLevel0.SetTile(pos, TileOne0[0]);
                     break;
-                case ETileType.TypeTwo:
+                case 1:
                     m_TileMapLevel0.SetTile(pos, TileTwo0[0]);
                     break;
-                case ETileType.TypeThree:
+                case 2:
                     m_TileMapLevel0.SetTile(pos, TileThree0[0]);
                     break;
-                case ETileType.Neutral:
+                case 3:
                     m_TileMapLevel0.SetTile(pos, NeutralTile);
                     break;
             }

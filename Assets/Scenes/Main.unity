@@ -677,31 +677,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8742808684409121922, guid: 8892b32f9b717664a9cb11ab3d67fedc,
-        type: 3}
-      propertyPath: m_CellGap.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4394728753382525951, guid: 8892b32f9b717664a9cb11ab3d67fedc,
-        type: 3}
-      propertyPath: m_SortOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742808683468366228, guid: 8892b32f9b717664a9cb11ab3d67fedc,
-        type: 3}
-      propertyPath: m_SortOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742808683468366228, guid: 8892b32f9b717664a9cb11ab3d67fedc,
-        type: 3}
-      propertyPath: m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8742808683468366228, guid: 8892b32f9b717664a9cb11ab3d67fedc,
-        type: 3}
-      propertyPath: m_DetectChunkCullingBounds
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8892b32f9b717664a9cb11ab3d67fedc, type: 3}
 --- !u!1001 &9112069888365990290
