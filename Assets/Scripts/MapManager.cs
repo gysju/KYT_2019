@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class MapManager : MonoBehaviour
 {
@@ -32,7 +33,27 @@ public class MapManager : MonoBehaviour
     [SerializeField] private float m_TileSizeY = 1.0f;
 
     public TileCase[][] m_MapCoordonate;
+
+    [Space(5)]
+
+    public TileBase NeutralTile;
+
+    [Space(5)]
+    public List<TileBase> TileOne0 = new List<TileBase>();
+    public List<TileBase> TileOne1 = new List<TileBase>();
+
+    [Space(5)]
+    public List<TileBase> TileTwo0 = new List<TileBase>();
+    public List<TileBase> TileTwo1 = new List<TileBase>();
+
+    [Space(5)]
+    public List<TileBase> TileThree0 = new List<TileBase>();
+    public List<TileBase> TileThree1 = new List<TileBase>();
+
     private List<TileCase> m_ShuffleCoordonate = new List<TileCase>();
+
+    public Tilemap m_TileMapLevel0;
+    public Tilemap m_TileMapLevel1;
 
     private void Awake()
     {
@@ -101,6 +122,48 @@ public class MapManager : MonoBehaviour
             int randomIndex = Random.Range(i, list.Count);
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
+        }
+    }
+
+    public void ChangeTileType( int level, int playerID, TileCase tileCase)
+    {
+        Vector3Int pos = new Vector3Int( tileCase.m_X - 5, tileCase.m_Y - 5, 0);
+
+        if ( level == 0)
+        {
+            switch (tileCase.m_TileType)
+            {
+                case ETileType.TypeOne:
+                    m_TileMapLevel0.SetTile(pos, TileOne0[0]);
+                    break;
+                case ETileType.TypeTwo:
+                    m_TileMapLevel0.SetTile(pos, TileTwo0[0]);
+                    break;
+                case ETileType.TypeThree:
+                    m_TileMapLevel0.SetTile(pos, TileThree0[0]);
+                    break;
+                case ETileType.Neutral:
+                    m_TileMapLevel0.SetTile(pos, NeutralTile);
+                    break;
+            }
+        }
+        else
+        {
+            switch (tileCase.m_TileType)
+            {
+                case ETileType.TypeOne:
+                    m_TileMapLevel1.SetTile(pos, TileOne1[0]);
+                    break;
+                case ETileType.TypeTwo:
+                    m_TileMapLevel1.SetTile(pos, TileTwo1[0]);
+                    break;
+                case ETileType.TypeThree:
+                    m_TileMapLevel1.SetTile(pos, TileThree1[0]);
+                    break;
+                case ETileType.Neutral:
+                    m_TileMapLevel1.SetTile(pos, NeutralTile);
+                    break;
+            }
         }
     }
 

@@ -138,6 +138,7 @@ public class Player : MonoBehaviour
             //{
                 Paths[i].m_TileType = t;
                 Paths[i].m_Owner = gameObject;
+                MapManager.Instance.ChangeTileType(1, 0, Paths[i]);
             //}
         }
 
