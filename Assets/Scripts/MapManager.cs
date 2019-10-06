@@ -18,6 +18,7 @@ public class MapManager : MonoBehaviour
         public Tool m_Weapon = null;
         public Tool m_OriginalWeapon = null;
         public ETileType m_TileType = ETileType.Neutral;
+        public TileBase m_originalTile;
 
         public float m_XCoord = 0.0f;
         public float m_YCoord = 0.0f;
@@ -96,6 +97,9 @@ public class MapManager : MonoBehaviour
                 m_MapCoordonate[i][j].m_YCoord = j * m_TileSizeY - ((m_SizeY - 1) * m_TileSizeY * 0.5f);
 
                 m_ShuffleCoordonate.Add(m_MapCoordonate[i][j]);
+
+                Vector3Int pos = new Vector3Int(i - 5, j - 5, 0);
+                m_MapCoordonate[i][j].m_originalTile = m_TileMapLevel0.GetTile(pos);
             }
         }
         Shuffle(m_ShuffleCoordonate);
@@ -110,6 +114,7 @@ public class MapManager : MonoBehaviour
             m_ShuffleCoordonate[i].m_Weapon = m_ShuffleCoordonate[i].m_OriginalWeapon;
 
             Vector3Int pos = new Vector3Int(m_ShuffleCoordonate[i].m_X - 5, m_ShuffleCoordonate[i].m_Y - 5, 0);
+            m_TileMapLevel0.SetTile(pos, m_ShuffleCoordonate[i].m_originalTile);
             m_TileMapLevel1.SetTile(pos, null);
         }
 

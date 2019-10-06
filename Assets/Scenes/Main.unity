@@ -126,7 +126,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8486585707722145141}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &583154347
+--- !u!95 &583154348
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8486585707722145141}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &883990523
+--- !u!95 &883990524
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
