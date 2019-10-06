@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     private float m_originalGameDuration;
 
     private Transform m_ToolParent;
+    private List<Tool> m_Tools = new List<Tool>();
 
     private void Awake()
     {
@@ -41,18 +42,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        SpawnTools();
-    }
-
     private void Update()
     {
         UpdateState();
     }
     void SpawnTools()
     {
-        m_ToolParent = new GameObject("[TOOLS]").transform;
+        if(m_ToolParent == null)
+            m_ToolParent = new GameObject("[TOOLS]").transform;
 
         SpawnToolByType(m_AxePrefab);
         SpawnToolByType(m_ChiselPrefab);
@@ -75,7 +72,19 @@ public class GameManager : MonoBehaviour
             tool.CurrentTileCase = tileCase;
             tileCase.m_Owner = null;
             tileCase.m_Weapon = tool;
+            tileCase.m_OriginalWeapon = tool;
+
+            m_Tools.Add(tool);
         }
+    }
+
+    void CleanTools()
+    {
+        for (int i = 0; i < m_Tools.Count; i++)
+        {
+            Destroy(m_Tools[i].gameObject);
+        }
+        m_Tools.Clear();
     }
 
     void UpdateState()
@@ -142,6 +151,9 @@ public class GameManager : MonoBehaviour
     {
         GameState = EGameState.InGame;
         GameDuration = m_originalGameDuration;
+        MapManager.Instance.CleanMap();
+        CleanTools();
+        SpawnTools();
     }
 
     public void Resume()

@@ -16,6 +16,7 @@ public class MapManager : MonoBehaviour
     {
         public GameObject m_Owner = null;
         public Tool m_Weapon = null;
+        public Tool m_OriginalWeapon = null;
         public ETileType m_TileType = ETileType.Neutral;
 
         public float m_XCoord = 0.0f;
@@ -97,6 +98,21 @@ public class MapManager : MonoBehaviour
                 m_ShuffleCoordonate.Add(m_MapCoordonate[i][j]);
             }
         }
+        Shuffle(m_ShuffleCoordonate);
+    }
+
+    public void CleanMap()
+    {
+        for (int i = 0; i < m_ShuffleCoordonate.Count; i++)
+        {
+            m_ShuffleCoordonate[i].m_Owner = null;
+            m_ShuffleCoordonate[i].m_TileType = ETileType.Neutral;
+            m_ShuffleCoordonate[i].m_Weapon = m_ShuffleCoordonate[i].m_OriginalWeapon;
+
+            Vector3Int pos = new Vector3Int(m_ShuffleCoordonate[i].m_X - 5, m_ShuffleCoordonate[i].m_Y - 5, 0);
+            m_TileMapLevel1.SetTile(pos, null);
+        }
+
         Shuffle(m_ShuffleCoordonate);
     }
 
