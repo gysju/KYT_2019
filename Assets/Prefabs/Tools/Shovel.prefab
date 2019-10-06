@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b7f51c12bdfd040ba77a6a01acc2d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ToolType: 0
+  m_ToolType: 1
   m_SpriteRenderer: {fileID: 0}
   m_Animator: {fileID: 0}
   m_OriginalParent: {fileID: 0}

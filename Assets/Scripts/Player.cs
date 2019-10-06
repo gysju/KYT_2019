@@ -127,6 +127,7 @@ public class Player : MonoBehaviour
         if (Paths.Count > 1 && Paths[0] == tile)
         {
             FillMap();
+
             return;
         }
         else if (tile.m_Owner == gameObject || Paths.Contains(tile))
@@ -162,6 +163,7 @@ public class Player : MonoBehaviour
             }
         }
 
+        CleanDrawMap();
         Paths.Clear();
     }
 
