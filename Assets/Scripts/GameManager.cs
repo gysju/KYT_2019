@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Doozy.Engine;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class GameManager : MonoBehaviour
     {
         Menu,
         InGame,
-        Endgame
+        Endgame,
+        Paused
     }
+
     public int m_NumberOfPlayer = 2;
 
     [Space(5)]
@@ -21,6 +24,7 @@ public class GameManager : MonoBehaviour
     public EGameState GameState = EGameState.Menu;
 
     public float GameDuration = 60.0f;
+    private float m_originalGameDuration;
 
     private Transform m_ToolParent;
 
@@ -29,6 +33,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            m_originalGameDuration = GameDuration;
         }
         else
         {
@@ -41,6 +46,10 @@ public class GameManager : MonoBehaviour
         SpawnTools();
     }
 
+    private void Update()
+    {
+        UpdateState();
+    }
     void SpawnTools()
     {
         m_ToolParent = new GameObject("[TOOLS]").transform;
@@ -82,6 +91,9 @@ public class GameManager : MonoBehaviour
             case EGameState.Endgame:
                 UpdateEndGame();
                 break;
+            case EGameState.Paused:
+                UpdatePaused();
+                break;
             default:
                 break;
         }
@@ -95,6 +107,25 @@ public class GameManager : MonoBehaviour
     void UpdateInGame()
     {
         GameDuration -= Time.deltaTime;
+        if(GameDuration <= 0.0f)
+        {
+            GameState = EGameState.Endgame;
+            GameEventMessage.SendEvent("EndGame");
+        }
+        else if (Input.GetButtonDown("Escape") || Input.GetKey(KeyCode.Escape))
+        {                       
+            GameState = EGameState.Paused;
+            GameEventMessage.SendEvent("IsPaused");                        
+        }
+    }
+
+    void UpdatePaused()
+    {
+        if (Input.GetButtonDown("Escape") || Input.GetKey(KeyCode.Escape))
+        {
+            GameState = EGameState.InGame;
+            GameEventMessage.SendEvent("InGame");
+        }
     }
 
     void UpdateEndGame()
@@ -107,9 +138,16 @@ public class GameManager : MonoBehaviour
         GameState = EGameState.Menu;
     }
 
-    void StartGame()
+    public void StartGame()
     {
         GameState = EGameState.InGame;
+        GameDuration = m_originalGameDuration;
+    }
+
+    public void Resume()
+    {
+        GameState = EGameState.InGame;
+        GameEventMessage.SendEvent("InGame");
     }
 
     void EndGame()

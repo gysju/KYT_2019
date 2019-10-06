@@ -21,3 +21,6 @@ MonoBehaviour:
   - EndGame
   - InGame
   - Logo
+  - Black
+  - Title
+  - Paused

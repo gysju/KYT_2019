@@ -13,12 +13,46 @@ MonoBehaviour:
   m_Name: SoundDatabase_General
   m_EditorClassIdentifier: 
   DatabaseName: General
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 007c3e9a42b03d24199367ebfc063d68,
+    type: 2}
   SoundNames:
   - No Sound
+  - InGame
+  - MainMenu
   - No Sound
   Database:
   - {fileID: 6957066827777674148}
+  - {fileID: 4635775631722142223}
+  - {fileID: 7059117802439797849}
+--- !u!114 &4635775631722142223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6c631d933489d4ca7328a2a5983e10, type: 3}
+  m_Name: InGame
+  m_EditorClassIdentifier: 
+  DatabaseName: General
+  SoundName: InGame
+  IgnoreListenerPause: 1
+  Volume:
+    MinValue: 0
+    MaxValue: 0
+  Pitch:
+    MinValue: 0
+    MaxValue: 0
+  SpatialBlend: 0
+  Loop: 1
+  Mode: 0
+  ResetSequenceAfterInactiveTime: 0
+  SequenceResetTime: 5
+  Sounds:
+  - AudioClip: {fileID: 8300000, guid: 5e9b519cd049b1040af622c445c05f09, type: 3}
+    Weight: 1
 --- !u!114 &6957066827777674148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,3 +80,32 @@ MonoBehaviour:
   ResetSequenceAfterInactiveTime: 0
   SequenceResetTime: 5
   Sounds: []
+--- !u!114 &7059117802439797849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6c631d933489d4ca7328a2a5983e10, type: 3}
+  m_Name: MainMenu
+  m_EditorClassIdentifier: 
+  DatabaseName: General
+  SoundName: MainMenu
+  IgnoreListenerPause: 1
+  Volume:
+    MinValue: 0
+    MaxValue: 0
+  Pitch:
+    MinValue: 0
+    MaxValue: 0
+  SpatialBlend: 0
+  Loop: 1
+  Mode: 0
+  ResetSequenceAfterInactiveTime: 0
+  SequenceResetTime: 5
+  Sounds:
+  - AudioClip: {fileID: 8300000, guid: d7873887f18ba6542b1e48a6788eec62, type: 3}
+    Weight: 1
