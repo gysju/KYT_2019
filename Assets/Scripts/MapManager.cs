@@ -158,10 +158,10 @@ public class MapManager : MonoBehaviour
                     m_TileMapLevel0.SetTile(pos, TileOne0[GetTileIdByPos( tileCase.m_X, tileCase.m_Y)]);
                     break;
                 case 1:
-                    m_TileMapLevel0.SetTile(pos, TileTwo0[0]);
+                    m_TileMapLevel0.SetTile(pos, TileTwo0[GetTileIdByPos(tileCase.m_X, tileCase.m_Y)]);
                     break;
                 case 2:
-                    m_TileMapLevel0.SetTile(pos, TileThree0[0]);
+                    m_TileMapLevel0.SetTile(pos, TileThree0[GetTileIdByPos(tileCase.m_X, tileCase.m_Y)]);
                     break;
                 case 3:
                     m_TileMapLevel0.SetTile(pos, NeutralTile);
