@@ -553,6 +553,11 @@ PrefabInstance:
       propertyPath: m_PlayerCanvas1
       value: 
       objectReference: {fileID: 583154346}
+    - target: {fileID: 6930331337886161522, guid: 3cd8a5b031c9e93478000e6d69f0f20b,
+        type: 3}
+      propertyPath: GameDuration
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6930331337886161525, guid: 3cd8a5b031c9e93478000e6d69f0f20b,
         type: 3}
       propertyPath: m_LocalPosition.x

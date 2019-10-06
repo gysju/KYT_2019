@@ -103,11 +103,17 @@ public class Player : MonoBehaviour
 
     void Action()
     {
-        if (Input.GetButton("Action" + m_ID) && EquipedTool  != null)
+        if (EquipedTool != null)
         {
-            DrawMap();
+            if (Input.GetButton("Action" + m_ID))
+            {
+                DrawMap();
+            }
+            else if (Input.GetButtonUp("Action" + m_ID))
+            {
+                CleanDrawMap();
+            }
         }
-
         if (Input.GetButtonDown("Action" + m_ID) && MapManager.Instance.m_MapCoordonate[m_Xpos][m_Ypos].m_Weapon != null)
         {
             SwitchWeapon();
@@ -132,20 +138,61 @@ public class Player : MonoBehaviour
         MapManager.Instance.ChangeTileType(0, m_ID, tile);
     }
 
+    void CleanDrawMap()
+    {
+        for (int i = 0; i < Paths.Count; i++)
+        {
+            Vector3Int pos = new Vector3Int(Paths[i].m_X - 5, Paths[i].m_Y - 5, 0);
+            MapManager.Instance.m_TileMapLevel0.SetTile(pos, Paths[i].m_originalTile);
+        }
+
+        Paths.Clear();
+    }
+
     void FillMap()
     {
         MapManager.ETileType t = (MapManager.ETileType)Random.Range(0, (int)(MapManager.ETileType.Neutral)); 
         for (int i = 0; i < Paths.Count; i++)
         {
-            //if (Paths[i].m_TileType == MapManager.ETileType.Neutral)
-            //{
-                Paths[i].m_TileType = t;
-                Paths[i].m_Owner = gameObject;
-                MapManager.Instance.ChangeTileType(1, m_ID, Paths[i]);
-            //}
+            if (CheckTileType(Paths[i]))
+            {
+              Paths[i].m_TileType = t;
+              Paths[i].m_Owner = gameObject;
+              MapManager.Instance.ChangeTileType(1, m_ID, Paths[i]);
+            }
         }
 
         Paths.Clear();
+    }
+
+    bool CheckTileType( MapManager.TileCase tileCase)
+    {
+        if (tileCase.m_TileType == MapManager.ETileType.Neutral)
+        {
+            return true;
+        }
+        else 
+        {
+            switch (EquipedTool.m_ToolType)
+            {
+                case MapManager.ETileType.TypeOne:
+                    if (tileCase.m_TileType == MapManager.ETileType.TypeOne)
+                        return true;
+                    break;
+
+                case MapManager.ETileType.TypeTwo:
+                    if (tileCase.m_TileType == MapManager.ETileType.TypeTwo)
+                        return true;
+                    break;
+
+                case MapManager.ETileType.TypeThree:
+                    if (tileCase.m_TileType == MapManager.ETileType.TypeThree)
+                        return true;
+                    break;
+            }
+        }
+
+        return false;
     }
 
     void CheckPos()
