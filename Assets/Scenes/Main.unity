@@ -472,7 +472,7 @@ PrefabInstance:
     - target: {fileID: 3724623694265425609, guid: 731758e415521e04ea98c0cd06bb9c62,
         type: 3}
       propertyPath: m_Name
-      value: '[PLAYER_ONE]'
+      value: '[PLAYER_Blue]'
       objectReference: {fileID: 0}
     - target: {fileID: 3724623694265425612, guid: 731758e415521e04ea98c0cd06bb9c62,
         type: 3}
@@ -545,19 +545,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6930331337886161522, guid: 3cd8a5b031c9e93478000e6d69f0f20b,
         type: 3}
-      propertyPath: m_PlayerCanvas0
-      value: 
-      objectReference: {fileID: 883990522}
-    - target: {fileID: 6930331337886161522, guid: 3cd8a5b031c9e93478000e6d69f0f20b,
-        type: 3}
-      propertyPath: m_PlayerCanvas1
+      propertyPath: m_PlayerCanvasPink
       value: 
       objectReference: {fileID: 583154346}
     - target: {fileID: 6930331337886161522, guid: 3cd8a5b031c9e93478000e6d69f0f20b,
         type: 3}
-      propertyPath: GameDuration
-      value: 100
-      objectReference: {fileID: 0}
+      propertyPath: m_PlayerCanvasBlue
+      value: 
+      objectReference: {fileID: 883990522}
     - target: {fileID: 6930331337886161525, guid: 3cd8a5b031c9e93478000e6d69f0f20b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -817,7 +812,7 @@ PrefabInstance:
     - target: {fileID: 9112069889809025647, guid: 8486592fe6f002b47ae2ebae3e515ee0,
         type: 3}
       propertyPath: m_Name
-      value: '[PLAYER_TWO]'
+      value: '[PLAYER_Pink]'
       objectReference: {fileID: 0}
     - target: {fileID: 9112069889809026450, guid: 8486592fe6f002b47ae2ebae3e515ee0,
         type: 3}

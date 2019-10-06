@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Players: []
-  m_PlayerCanvas0: {fileID: 0}
-  m_PlayerCanvas1: {fileID: 0}
+  m_PlayerCanvasPink: {fileID: 0}
+  m_PlayerCanvasBlue: {fileID: 0}
   m_AxePrefab: {fileID: 5475556404203368213, guid: ade895cc8403e574fb181c55281c0ab4,
     type: 3}
   m_ChiselPrefab: {fileID: 5475556404203368213, guid: e8eee3bea20c0b4428acfe01e242ca99,
@@ -53,4 +53,4 @@ MonoBehaviour:
   m_ShovelPrefab: {fileID: 5475556404203368213, guid: 2ebfbbbd497318244bed884dbaa73f24,
     type: 3}
   GameState: 0
-  GameDuration: 5
+  GameDuration: 15

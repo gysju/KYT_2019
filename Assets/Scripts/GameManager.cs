@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
 
     public List<Player> m_Players = new List<Player>();
 
-    public GameObject m_PlayerCanvas0;
-    public GameObject m_PlayerCanvas1;
+    public GameObject m_PlayerCanvasPink;
+    public GameObject m_PlayerCanvasBlue;
 
     [Space(5)]
     public Tool m_AxePrefab;
@@ -151,16 +151,16 @@ public class GameManager : MonoBehaviour
             GameState = EGameState.Menu;
             return;
         }
-        else if (count1 < count2)
+        else if (count1 > count2)
         {
-            m_PlayerCanvas0.SetActive(true);
-            m_PlayerCanvas0.GetComponent<Animator>().SetTrigger("Victory");
+            m_PlayerCanvasPink.SetActive(true);
+            m_PlayerCanvasPink.GetComponent<Animator>().SetTrigger("Victory");
             Debug.Log(m_Players[0].transform.name);
         }
         else
         {
-            m_PlayerCanvas1.SetActive(true);
-            m_PlayerCanvas1.GetComponent<Animator>().SetTrigger("Victory");
+            m_PlayerCanvasBlue.SetActive(true);
+            m_PlayerCanvasBlue.GetComponent<Animator>().SetTrigger("Victory");
             Debug.Log(m_Players[1].transform.name);
         }
 
@@ -177,6 +177,10 @@ public class GameManager : MonoBehaviour
         GameState = EGameState.InGame;
         GameDuration = m_originalGameDuration;
         MapManager.Instance.CleanMap();
+
+        m_PlayerCanvasPink.SetActive(false);
+        m_PlayerCanvasBlue.SetActive(false);
+
         CleanTools();
         SpawnTools();
     }
