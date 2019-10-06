@@ -134,7 +134,7 @@ public class MapManager : MonoBehaviour
             switch (playerID)
             {
                 case 0:
-                    m_TileMapLevel0.SetTile(pos, TileOne0[0]);
+                    m_TileMapLevel0.SetTile(pos, TileOne0[GetTileIdByPos( tileCase.m_X, tileCase.m_Y)]);
                     break;
                 case 1:
                     m_TileMapLevel0.SetTile(pos, TileTwo0[0]);
@@ -161,6 +161,46 @@ public class MapManager : MonoBehaviour
                     m_TileMapLevel1.SetTile(pos, TileThree1[(int)tileCase.m_TileType]);
                     break;
             }
+        }
+    }
+
+    private int GetTileIdByPos(int x, int y)
+    {
+        if (x == 0 && y == 0) //corner
+        {
+            return 12;
+        }
+        else if (x == 0 && y == 9) // corner
+        {
+            return 0;
+        }
+        else if (x == 9 && y == 0) // corner
+        {
+            return 15;
+        }
+        else if (x == 9 && y == 9) // corner
+        {
+            return 3;
+        }
+        else if (x > 0 && x < 9 && y == 0) // up
+        {
+            return 14;
+        }
+        else if (x > 0 && x < 9 && y == 9) // down
+        {
+            return 2;
+        }
+        else if (y > 0 && y < 9 && x == 0) // left
+        {
+            return 4;
+        }
+        else if (y > 0 && y < 9 && x == 9) // right
+        {
+            return 7;
+        }
+        else
+        {
+            return 6;
         }
     }
 
