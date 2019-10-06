@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+    public enum EGameState
+    {
+        Menu,
+        InGame,
+        Endgame
+    }
     public int m_NumberOfPlayer = 2;
 
     [Space(5)]
@@ -11,7 +18,23 @@ public class GameManager : MonoBehaviour
     public Tool m_ChiselPrefab;
     public Tool m_ShovelPrefab;
 
+    public EGameState GameState = EGameState.Menu;
+
+    public float GameDuration = 60.0f;
+
     private Transform m_ToolParent;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     void Start()
     {
@@ -44,5 +67,53 @@ public class GameManager : MonoBehaviour
             tileCase.m_Owner = null;
             tileCase.m_Weapon = tool;
         }
+    }
+
+    void UpdateState()
+    {
+        switch (GameState)
+        {
+            case EGameState.Menu:
+                UpdateMenu();
+                break;
+            case EGameState.InGame:
+                UpdateInGame();
+                break;
+            case EGameState.Endgame:
+                UpdateEndGame();
+                break;
+            default:
+                break;
+        }
+    }
+
+    void UpdateMenu()
+    {
+
+    }
+
+    void UpdateInGame()
+    {
+        GameDuration -= Time.deltaTime;
+    }
+
+    void UpdateEndGame()
+    {
+
+    }
+
+    void DisplayMenu()
+    {
+        GameState = EGameState.Menu;
+    }
+
+    void StartGame()
+    {
+        GameState = EGameState.InGame;
+    }
+
+    void EndGame()
+    {
+        GameState = EGameState.Endgame;
     }
 }
