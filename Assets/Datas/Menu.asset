@@ -1,5 +1,106 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8286879889889541488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1cae8f478440ec81883a1fcedcb279, type: 3}
+  m_Name: SoundNode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: ddeb7f37-0314-430a-907e-d32cb196104f
+      m_inputNodeId: 422f0eae-b0bf-4ec2-a1e4-dbf4c3f92874
+      m_inputSocketId: e8fe199c-c153-431d-b439-3fdfd62521c4
+      m_outputNodeId: 1e92c280-d4a6-4ddb-abad-d038aeb06e45
+      m_outputSocketId: 73d967a5-a758-4dea-bf99-11f7901b3344
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 2ca986ee-412d-46cc-8191-72cf2477cc29
+      m_inputNodeId: 422f0eae-b0bf-4ec2-a1e4-dbf4c3f92874
+      m_inputSocketId: e8fe199c-c153-431d-b439-3fdfd62521c4
+      m_outputNodeId: 1e92c280-d4a6-4ddb-abad-d038aeb06e45
+      m_outputSocketId: c65b6e9b-e13f-48d8-a6b3-4a84eabdb264
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: e8fe199c-c153-431d-b439-3fdfd62521c4
+    m_nodeId: 422f0eae-b0bf-4ec2-a1e4-dbf4c3f92874
+    m_socketName: InputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: d848ef92-39f7-4db0-a496-068cc9ceeedb
+      m_inputNodeId: 0cb2200a-cea0-4f60-b024-4aeb07ca7b8b
+      m_inputSocketId: f00c29f2-b59d-471b-b1ab-78614c1db7df
+      m_outputNodeId: 422f0eae-b0bf-4ec2-a1e4-dbf4c3f92874
+      m_outputSocketId: 6b8e1ab7-1406-4953-9af5-1b9dbc816aaf
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 6b8e1ab7-1406-4953-9af5-1b9dbc816aaf
+    m_nodeId: 422f0eae-b0bf-4ec2-a1e4-dbf4c3f92874
+    m_socketName: OutputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 1
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 132
+  m_width: 216
+  m_x: 1980
+  m_y: 132
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: 1e5c2d92-38c2-4dd7-a7ec-f5c22282f6eb
+  m_id: 422f0eae-b0bf-4ec2-a1e4-dbf4c3f92874
+  m_name: Play InGame sound
+  m_notes: 
+  ErrorPlayActionHasNoSound: 0
+  SoundData:
+    SoundSource: 0
+    DatabaseName: General
+    SoundName: InGame
+    AudioClip: {fileID: 0}
+    OutputAudioMixerGroup: {fileID: 0}
+  SoundAction: 1
 --- !u!114 &-6008120620902730999
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -44,11 +145,11 @@ MonoBehaviour:
   m_outputSockets:
   - m_connectionMode: 0
     m_connections:
-    - m_inputConnectionPoint: {x: 202, y: 4}
-      m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: c1136df8-07fd-4474-aa9b-0af990c23696
-      m_inputNodeId: 0cb2200a-cea0-4f60-b024-4aeb07ca7b8b
-      m_inputSocketId: f00c29f2-b59d-471b-b1ab-78614c1db7df
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: ddeb7f37-0314-430a-907e-d32cb196104f
+      m_inputNodeId: 422f0eae-b0bf-4ec2-a1e4-dbf4c3f92874
+      m_inputSocketId: e8fe199c-c153-431d-b439-3fdfd62521c4
       m_outputNodeId: 1e92c280-d4a6-4ddb-abad-d038aeb06e45
       m_outputSocketId: 73d967a5-a758-4dea-bf99-11f7901b3344
     m_connectionPoints:
@@ -72,9 +173,9 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: 07347f42-0e5d-4618-8da0-f7571af03013
-      m_inputNodeId: bceea403-3e4c-4e3f-91ab-fc1ec5eba3ac
-      m_inputSocketId: 703a7b9c-1059-4cfe-a063-aaec02c5962d
+      m_id: b10eabe8-dc8f-455c-9f92-2c53b63bdda4
+      m_inputNodeId: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+      m_inputSocketId: 1209ff0e-83be-42d7-939f-22625f6463fd
       m_outputNodeId: 1e92c280-d4a6-4ddb-abad-d038aeb06e45
       m_outputSocketId: ab71dbf9-ce37-4bfc-ae77-5e57017e3cb5
     m_connectionPoints:
@@ -96,11 +197,11 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - m_connectionMode: 0
     m_connections:
-    - m_inputConnectionPoint: {x: 202, y: 4}
-      m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: cc6ed150-6022-4945-b0f5-44082728b02a
-      m_inputNodeId: 0cb2200a-cea0-4f60-b024-4aeb07ca7b8b
-      m_inputSocketId: f00c29f2-b59d-471b-b1ab-78614c1db7df
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 2ca986ee-412d-46cc-8191-72cf2477cc29
+      m_inputNodeId: 422f0eae-b0bf-4ec2-a1e4-dbf4c3f92874
+      m_inputSocketId: e8fe199c-c153-431d-b439-3fdfd62521c4
       m_outputNodeId: 1e92c280-d4a6-4ddb-abad-d038aeb06e45
       m_outputSocketId: c65b6e9b-e13f-48d8-a6b3-4a84eabdb264
     m_connectionPoints:
@@ -130,8 +231,8 @@ MonoBehaviour:
   m_useUpdate: 0
   m_height: 176
   m_width: 216
-  m_x: 1380
-  m_y: 252
+  m_x: 1692
+  m_y: 264
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: 1e5c2d92-38c2-4dd7-a7ec-f5c22282f6eb
@@ -232,6 +333,13 @@ MonoBehaviour:
       m_inputSocketId: f1148ada-974b-42be-ae7d-70aab67cd782
       m_outputNodeId: bceea403-3e4c-4e3f-91ab-fc1ec5eba3ac
       m_outputSocketId: 19c93f62-db8e-499b-a596-8ce7773293d7
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 30509ab2-ed24-46b4-b637-d285fc9a0966
+      m_inputNodeId: 94f56caf-9df4-4278-b43a-51da8b3a7395
+      m_inputSocketId: f1148ada-974b-42be-ae7d-70aab67cd782
+      m_outputNodeId: 4fb7b560-5a1f-4865-88f7-b81b513c3456
+      m_outputSocketId: 7b46a066-25a5-4646-8091-f082dd82911a
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -286,8 +394,8 @@ MonoBehaviour:
   m_useUpdate: 0
   m_height: 172
   m_width: 216
-  m_x: 816
-  m_y: -12
+  m_x: 1128
+  m_y: 0
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: 1e5c2d92-38c2-4dd7-a7ec-f5c22282f6eb
@@ -426,6 +534,13 @@ MonoBehaviour:
       m_inputSocketId: db1a6c63-7988-429e-8d6b-63a28f999198
       m_outputNodeId: 7d2e3f4f-bdb9-416b-ad11-efb115820c6c
       m_outputSocketId: 136224bd-6635-402c-8019-c8498d9667e2
+    - m_inputConnectionPoint: {x: 166, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 318abd5a-d634-4946-936a-58b70cabf9cf
+      m_inputNodeId: d549f472-674f-4376-89f2-4e58176a0e96
+      m_inputSocketId: db1a6c63-7988-429e-8d6b-63a28f999198
+      m_outputNodeId: 7d2e3f4f-bdb9-416b-ad11-efb115820c6c
+      m_outputSocketId: 136224bd-6635-402c-8019-c8498d9667e2
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 166, y: 4}
@@ -454,8 +569,8 @@ MonoBehaviour:
   m_useUpdate: 0
   m_height: 80
   m_width: 180
-  m_x: 804
-  m_y: 288
+  m_x: 876
+  m_y: 432
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: 1e5c2d92-38c2-4dd7-a7ec-f5c22282f6eb
@@ -552,6 +667,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugMode: 0
   m_nodes:
+  - {fileID: -8286879889889541488}
+  - {fileID: 7280979891176735138}
+  - {fileID: 1446701797618808337}
   - {fileID: -4231536005998940863}
   - {fileID: 3041535126529489382}
   - {fileID: 1121311027208582731}
@@ -566,7 +684,7 @@ MonoBehaviour:
   m_version: 1
   m_description: 
   m_id: 1e5c2d92-38c2-4dd7-a7ec-f5c22282f6eb
-  m_lastModified: 132148216464229953
+  m_lastModified: 132148299644457017
 --- !u!114 &610359690104039298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -613,9 +731,9 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: fbfd5800-7ba0-4a7a-aea4-d43e0ba0c809
-      m_inputNodeId: bceea403-3e4c-4e3f-91ab-fc1ec5eba3ac
-      m_inputSocketId: 703a7b9c-1059-4cfe-a063-aaec02c5962d
+      m_id: 4446b20f-0d26-4eb1-b575-5feb5e22329b
+      m_inputNodeId: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+      m_inputSocketId: 1209ff0e-83be-42d7-939f-22625f6463fd
       m_outputNodeId: 7d2e3f4f-bdb9-416b-ad11-efb115820c6c
       m_outputSocketId: a1e82e6f-3f2a-4012-b780-779601c3b62a
     m_connectionPoints:
@@ -639,7 +757,7 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: 166, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: 35a36c8b-6818-4254-bab5-d254f16c48b5
+      m_id: 318abd5a-d634-4946-936a-58b70cabf9cf
       m_inputNodeId: d549f472-674f-4376-89f2-4e58176a0e96
       m_inputSocketId: db1a6c63-7988-429e-8d6b-63a28f999198
       m_outputNodeId: 7d2e3f4f-bdb9-416b-ad11-efb115820c6c
@@ -671,8 +789,8 @@ MonoBehaviour:
   m_useUpdate: 0
   m_height: 152
   m_width: 216
-  m_x: 1380
-  m_y: 96
+  m_x: 1692
+  m_y: 108
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: 1e5c2d92-38c2-4dd7-a7ec-f5c22282f6eb
@@ -727,6 +845,13 @@ MonoBehaviour:
       m_inputSocketId: 6c901fd6-4f43-43bb-85a4-0d226a021f8c
       m_outputNodeId: 0e1289d8-96f4-4d1a-a6d5-dbfbdb640f7a
       m_outputSocketId: cdf1afee-9471-4278-8ba5-615ef458d99b
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 0b19f2a6-0f06-4e73-8baa-976eb30974a0
+      m_inputNodeId: c158c7be-d316-4b99-b685-3326c2e604d3
+      m_inputSocketId: 6c901fd6-4f43-43bb-85a4-0d226a021f8c
+      m_outputNodeId: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+      m_outputSocketId: 8ae70372-499a-4e73-88df-b9b90f1f7c46
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -797,6 +922,100 @@ MonoBehaviour:
     AudioClip: {fileID: 0}
     OutputAudioMixerGroup: {fileID: 0}
   SoundAction: 0
+--- !u!114 &1446701797618808337
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1cae8f478440ec81883a1fcedcb279, type: 3}
+  m_Name: SoundNode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 3ad2e38f-05a3-4604-b0e1-04eb6b56a76e
+      m_inputNodeId: 4fb7b560-5a1f-4865-88f7-b81b513c3456
+      m_inputSocketId: bfe47ed0-84fe-4e29-9cc8-e47af3744ca6
+      m_outputNodeId: bceea403-3e4c-4e3f-91ab-fc1ec5eba3ac
+      m_outputSocketId: 19c93f62-db8e-499b-a596-8ce7773293d7
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: bfe47ed0-84fe-4e29-9cc8-e47af3744ca6
+    m_nodeId: 4fb7b560-5a1f-4865-88f7-b81b513c3456
+    m_socketName: InputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 30509ab2-ed24-46b4-b637-d285fc9a0966
+      m_inputNodeId: 94f56caf-9df4-4278-b43a-51da8b3a7395
+      m_inputSocketId: f1148ada-974b-42be-ae7d-70aab67cd782
+      m_outputNodeId: 4fb7b560-5a1f-4865-88f7-b81b513c3456
+      m_outputSocketId: 7b46a066-25a5-4646-8091-f082dd82911a
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 7b46a066-25a5-4646-8091-f082dd82911a
+    m_nodeId: 4fb7b560-5a1f-4865-88f7-b81b513c3456
+    m_socketName: OutputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 1
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 132
+  m_width: 216
+  m_x: 888
+  m_y: -24
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: 1e5c2d92-38c2-4dd7-a7ec-f5c22282f6eb
+  m_id: 4fb7b560-5a1f-4865-88f7-b81b513c3456
+  m_name: Play Menu sound
+  m_notes: 
+  ErrorPlayActionHasNoSound: 0
+  SoundData:
+    SoundSource: 0
+    DatabaseName: General
+    SoundName: MainMenu
+    AudioClip: {fileID: 0}
+    OutputAudioMixerGroup: {fileID: 0}
+  SoundAction: 1
 --- !u!114 &3041535126529489382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1003,6 +1222,13 @@ MonoBehaviour:
       m_inputSocketId: 703a7b9c-1059-4cfe-a063-aaec02c5962d
       m_outputNodeId: 1e92c280-d4a6-4ddb-abad-d038aeb06e45
       m_outputSocketId: ab71dbf9-ce37-4bfc-ae77-5e57017e3cb5
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: e946d863-879f-4165-b341-57d99f43f3e2
+      m_inputNodeId: bceea403-3e4c-4e3f-91ab-fc1ec5eba3ac
+      m_inputSocketId: 703a7b9c-1059-4cfe-a063-aaec02c5962d
+      m_outputNodeId: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+      m_outputSocketId: 8ae70372-499a-4e73-88df-b9b90f1f7c46
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -1025,9 +1251,9 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: -2, y: 4}
       m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: 2367be8a-3deb-493f-a9ea-10b4bd3fcf0b
-      m_inputNodeId: 94f56caf-9df4-4278-b43a-51da8b3a7395
-      m_inputSocketId: f1148ada-974b-42be-ae7d-70aab67cd782
+      m_id: 3ad2e38f-05a3-4604-b0e1-04eb6b56a76e
+      m_inputNodeId: 4fb7b560-5a1f-4865-88f7-b81b513c3456
+      m_inputSocketId: bfe47ed0-84fe-4e29-9cc8-e47af3744ca6
       m_outputNodeId: bceea403-3e4c-4e3f-91ab-fc1ec5eba3ac
       m_outputSocketId: 19c93f62-db8e-499b-a596-8ce7773293d7
     m_connectionPoints:
@@ -1104,6 +1330,107 @@ MonoBehaviour:
     Name: Logo
   m_onExitShowViews: []
   m_onExitHideViews: []
+--- !u!114 &7280979891176735138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1cae8f478440ec81883a1fcedcb279, type: 3}
+  m_Name: SoundNode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 4446b20f-0d26-4eb1-b575-5feb5e22329b
+      m_inputNodeId: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+      m_inputSocketId: 1209ff0e-83be-42d7-939f-22625f6463fd
+      m_outputNodeId: 7d2e3f4f-bdb9-416b-ad11-efb115820c6c
+      m_outputSocketId: a1e82e6f-3f2a-4012-b780-779601c3b62a
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: b10eabe8-dc8f-455c-9f92-2c53b63bdda4
+      m_inputNodeId: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+      m_inputSocketId: 1209ff0e-83be-42d7-939f-22625f6463fd
+      m_outputNodeId: 1e92c280-d4a6-4ddb-abad-d038aeb06e45
+      m_outputSocketId: ab71dbf9-ce37-4bfc-ae77-5e57017e3cb5
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 1209ff0e-83be-42d7-939f-22625f6463fd
+    m_nodeId: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+    m_socketName: InputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 0b19f2a6-0f06-4e73-8baa-976eb30974a0
+      m_inputNodeId: c158c7be-d316-4b99-b685-3326c2e604d3
+      m_inputSocketId: 6c901fd6-4f43-43bb-85a4-0d226a021f8c
+      m_outputNodeId: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+      m_outputSocketId: 8ae70372-499a-4e73-88df-b9b90f1f7c46
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 8ae70372-499a-4e73-88df-b9b90f1f7c46
+    m_nodeId: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+    m_socketName: OutputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 1
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 132
+  m_width: 216
+  m_x: 1380
+  m_y: 192
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: 1e5c2d92-38c2-4dd7-a7ec-f5c22282f6eb
+  m_id: 85e8a35b-de94-4615-8f9d-e86ca74a6bd1
+  m_name: Play InGame sound
+  m_notes: 
+  ErrorPlayActionHasNoSound: 0
+  SoundData:
+    SoundSource: 0
+    DatabaseName: General
+    SoundName: InGame
+    AudioClip: {fileID: 0}
+    OutputAudioMixerGroup: {fileID: 0}
+  SoundAction: 1
 --- !u!114 &7503995095934075600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1156,6 +1483,13 @@ MonoBehaviour:
       m_inputSocketId: f00c29f2-b59d-471b-b1ab-78614c1db7df
       m_outputNodeId: 1e92c280-d4a6-4ddb-abad-d038aeb06e45
       m_outputSocketId: c65b6e9b-e13f-48d8-a6b3-4a84eabdb264
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: d848ef92-39f7-4db0-a496-068cc9ceeedb
+      m_inputNodeId: 0cb2200a-cea0-4f60-b024-4aeb07ca7b8b
+      m_inputSocketId: f00c29f2-b59d-471b-b1ab-78614c1db7df
+      m_outputNodeId: 422f0eae-b0bf-4ec2-a1e4-dbf4c3f92874
+      m_outputSocketId: 6b8e1ab7-1406-4953-9af5-1b9dbc816aaf
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -1236,8 +1570,8 @@ MonoBehaviour:
   m_useUpdate: 0
   m_height: 152
   m_width: 216
-  m_x: 1068
-  m_y: 12
+  m_x: 1380
+  m_y: 24
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: 1e5c2d92-38c2-4dd7-a7ec-f5c22282f6eb

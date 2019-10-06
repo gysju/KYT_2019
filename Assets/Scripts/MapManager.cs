@@ -225,6 +225,19 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    public int GetTilesNumber( Player player )
+    {
+        int count = 0;
+        for (int i = 0; i < m_ShuffleCoordonate.Count; i++)
+        {
+            if (m_ShuffleCoordonate[i].m_Owner == player.gameObject)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
     private void OnDrawGizmos()
     {
         if (m_MapCoordonate == null)

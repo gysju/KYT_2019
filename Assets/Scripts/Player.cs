@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        GameManager.Instance.m_Players.Add(this);
+
         MapManager.TileCase tileCase = new MapManager.TileCase();
         if (MapManager.Instance.GetAvailableCase(ref tileCase))
         {

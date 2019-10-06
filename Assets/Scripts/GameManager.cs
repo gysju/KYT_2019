@@ -14,7 +14,10 @@ public class GameManager : MonoBehaviour
         Paused
     }
 
-    public int m_NumberOfPlayer = 2;
+    public List<Player> m_Players = new List<Player>();
+
+    public GameObject m_PlayerCanvas0;
+    public GameObject m_PlayerCanvas1;
 
     [Space(5)]
     public Tool m_AxePrefab;
@@ -46,6 +49,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateState();
     }
+
     void SpawnTools()
     {
         if(m_ToolParent == null)
@@ -58,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnToolByType(Tool toolPrefab)
     {
-        for (int i = 0; i < m_NumberOfPlayer; i++)
+        for (int i = 0; i < 2; i++)
         {
             MapManager.TileCase tileCase = new MapManager.TileCase();
             if (!MapManager.Instance.GetAvailableCase(ref tileCase))
@@ -139,7 +143,28 @@ public class GameManager : MonoBehaviour
 
     void UpdateEndGame()
     {
+        int count1 = MapManager.Instance.GetTilesNumber(m_Players[0]);
+        int count2 = MapManager.Instance.GetTilesNumber(m_Players[1]);
 
+        if (count1 + count2 == 0)
+        {
+            GameState = EGameState.Menu;
+            return;
+        }
+        else if (count1 < count2)
+        {
+            m_PlayerCanvas0.SetActive(true);
+            m_PlayerCanvas0.GetComponent<Animator>().SetTrigger("Victory");
+            Debug.Log(m_Players[0].transform.name);
+        }
+        else
+        {
+            m_PlayerCanvas1.SetActive(true);
+            m_PlayerCanvas1.GetComponent<Animator>().SetTrigger("Victory");
+            Debug.Log(m_Players[1].transform.name);
+        }
+
+        GameState = EGameState.Menu; 
     }
 
     void DisplayMenu()
@@ -164,6 +189,6 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        GameState = EGameState.Endgame;
+        
     }
 }
