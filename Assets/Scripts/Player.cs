@@ -23,14 +23,14 @@ public class Player : MonoBehaviour
     private bool HasMoved {
         get { return m_PreviousPos != transform.position;}
     }
-
+    private AudioSource m_AudioSource;
     private MapManager.TileCase[] TileCaseSelected;
 
     private Tool EquipedTool = null;
 
     private void Awake()
     {
-
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -162,6 +162,9 @@ public class Player : MonoBehaviour
               MapManager.Instance.ChangeTileType(1, m_ID, Paths[i]);
             }
         }
+
+        m_AudioSource.pitch = Random.Range(0.67f, 0.8f);
+        m_AudioSource.Play();
 
         CleanDrawMap();
         Paths.Clear();

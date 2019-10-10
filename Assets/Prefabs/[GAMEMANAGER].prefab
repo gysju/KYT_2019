@@ -53,4 +53,4 @@ MonoBehaviour:
   m_ShovelPrefab: {fileID: 5475556404203368213, guid: 2ebfbbbd497318244bed884dbaa73f24,
     type: 3}
   GameState: 0
-  GameDuration: 15
+  GameDuration: 60
